@@ -1,0 +1,488 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+u,
+li {
+    font-family: 'Lato', sans-serif;
+}
+
+p,
+blockquote {
+    font-family: 'Caladea', serif;
+}
+
+.border-section-title {
+    padding: 0px 70px;
+    border: 4px solid transparent;
+    border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
+    border-image-slice: 1;
+}
+
+/********************          JUMBOTRON         ********************/
+
+.jumbotron-fluid {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 500px;
+}
+
+
+.table {
+    display: table;
+    margin-bottom: 0;
+}
+
+.table h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#welcome {
+    color: white;
+    font-weight: bold;
+}
+
+#blue {
+    font-size: 86px;
+    color: #3888ff;
+}
+
+/********************          End of JUMBOTRON           ********************/
+
+/********************           STICKY NAVBAR              ********************/
+header {
+    padding: 10px 100px;
+    box-sizing: border-box;
+    background: #000;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    margin-right: 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #f00;
+    text-decoration: none;
+    color: #fff;
+}
+
+/********************           End of STICKY NAVBAR               ********************/
+
+/********************          AQImap        ********************/
+
+#AQImap {
+    background: #8e9eab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/********************          End of AQImap           ********************/
+
+/********************          Brief Intro        ********************/
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+section.sec2 {
+    padding: 100px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+section.sec2 h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+section.sec2 p {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.sec2 {
+    background-image: url('../images/gioithieusoluoc.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/********************          End of Brief Intro           ********************/
+
+/********************          Post Section        ********************/
+
+.post-section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #02aab0, #00cdac);
+}
+
+.post-p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+    /* fallback */
+    max-height: 280px;
+    /* fallback */
+    -webkit-line-clamp: 13;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+a.post-button {
+    position: relative;
+    margin: 0px 0px;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    background: #000;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 60px;
+    border: 4px solid #000;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 1);
+}
+
+a.post-button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.post-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    transition: .5s;
+    transform: skewX(-15deg);
+}
+
+a.post-button:hover::before {
+    left: 210px;
+}
+
+a.post-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: .5s;
+    transform: skewX(-15deg);
+    transition-delay: .3s;
+}
+
+a.post-button:hover::after {
+    left: 210px;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #000;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
+}
+
+.box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.box:hover .imgBx img {
+    opacity: 0;
+}
+
+.box .content {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.box:hover .content {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.box .content h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.box .content p {
+    margin: 10px 0 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.5s;
+    text-align: justify;
+}
+
+.box:hover .content p {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+/********************          End of Post Section           ********************/
+
+/********************          What-we-do        ********************/
+
+/* #what-we-do {
+    background-image: linear-gradient(#2c3e50, #bdc3c7, #2c3e50);
+    color: white;
+    padding-bottom: 160px;
+} */
+
+.wwd-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#2c3e50, #bdc3c7, #2c3e50);
+    flex-direction: column;
+    padding-bottom: 160px;
+}
+
+.wwd-container {
+    position: relative;
+    margin-top: 250px;
+    max-width: 800px;
+    transform: skewY(-20deg);
+}
+
+.wwd-container .wwd-imgBx {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+.wwd-container .wwd-imgBx .wwd-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.wwd-container .wwd-imgBx:hover .wwd-img:nth-child(3) {
+    transform: translate(100px, -100px);
+}
+
+.wwd-container .wwd-imgBx:hover .wwd-img:nth-child(2) {
+    transform: translate(50px, -50px);
+    opacity: 0.5;
+}
+
+.wwd-container .wwd-imgBx:hover .wwd-img:nth-child(1) {
+    transform: translate(0px, 0px);
+    opacity: 0.1;
+}
+
+.wwd-container .wwd-h2 {
+    position: relative;
+    color: #fff;
+    font-size: 4em;
+}
+
+.wwd-container .wwd-skew {
+    transform-origin: top;
+    transform: skewX(45deg);
+}
+
+.wwd-container .wwd-skew .wwd-p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.wwd-container .wwd-skew .wwd-a {
+    position: relative;
+    padding: 10px 30px;
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    transform-origin: top;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    transform: skewX(-45deg);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.wwd-container .wwd-skew .wwd-a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/********************          End of What-we-do          ********************/
+
+
+/********************          Organizations          ********************/
+
+#organizations {
+    background: #536976;
+}
+
+.testimonials {
+    padding: 40px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.testimonials .card {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.testimonials .card .layer {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#03a9f4, #e91ee3);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.testimonials .card:hover .layer {
+    top: 0;
+}
+
+.testimonials .card .content {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials .card .content {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.testimonials .card .content .image {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+img#unep {
+    margin: 0px -3px;
+}
+
+img#natgeo {
+    margin: -7px -10px;
+}
+
+.testimonials .card .content h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.testimonials .card .content h2 span {
+    font-size: 14px;
+    color: #03a9f4;
+    transition: 0.5s;
+}
+
+.testimonials .card:hover .content h2 span {
+    color: #fff;
+}
+
+/********************           End of Organizations            ********************/
+
+/********************           Btn Go up           ********************/
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
